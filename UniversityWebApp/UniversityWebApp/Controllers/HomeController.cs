@@ -43,6 +43,7 @@ namespace UniversityWebApp.Controllers
             if (user != null)
             {
                 FormsAuthentication.SetAuthCookie(Convert.ToString(user.UserId), false);
+                Session["User"] = user;
                 if (user.UserType == "Admin")
                 {
                     return RedirectToAction("Index", "User", new { Area = "Admin" });
@@ -59,6 +60,7 @@ namespace UniversityWebApp.Controllers
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
+            Session["User"] = null;
             return RedirectToAction("Index");
 
         }

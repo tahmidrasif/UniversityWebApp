@@ -30,48 +30,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <body>
     <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-                <!-- Button for smallest screens -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="~/Content/images/logo.png" />
-                </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav pull-right mainNav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="sidebar-right.html">Right Sidebar</a></li>
-                            <li><a href="#">Dummy Link1</a></li>
-                            <li><a href="#">Dummy Link2</a></li>
-                            <li><a href="#">Dummy Link3</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                    <li>@Html.ActionLink("Log In", "LogIn", "Home")</li>
-                    </li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </div>
-    <!-- /.navbar -->  
-
-  
-
+    @Html.Partial("_NavPartial")
+   
+    <!-- /.navbar -->
     <!-- Main Body -->
-    <div class="container body-content">       
+    <div class="container body-content" style="margin-top: 35px">
         @RenderBody()
     </div>
     <!-- /Main Body -->
-
     <!-- Footer -->
     <footer id="footer">
 
@@ -190,7 +156,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <a href="#"><i class="fa fa-dribbble"></i></a>
                 <a href="#"><i class="fa fa-flickr"></i></a>
                 <a href="#"><i class="fa fa-github"></i></a>
-              
+
             </div>
 
             <div class="clear"></div>
@@ -227,7 +193,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </footer>
     <!-- /Footer -->
-
     <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
     <script src="~/Scripts/modernizr-latest.js"></script>
     <script type='text/javascript' src="~/Scripts/jquery-2.1.3.min.js"></script>

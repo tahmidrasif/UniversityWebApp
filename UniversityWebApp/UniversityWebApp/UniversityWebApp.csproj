@@ -164,6 +164,8 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\Admin\Models\User.cs" />
+    <Compile Include="Areas\Student\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -271,6 +273,9 @@
     <Content Include="Areas\Admin\Views\User\Details.cshtml" />
     <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\User\Index.cshtml" />
+    <Content Include="Areas\Student\Views\web.config" />
+    <Content Include="Areas\Student\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Student\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -326,9 +331,14 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\LogIn.cshtml" />
+    <Content Include="Views\Shared\_LinkPartial.cshtml" />
+    <Content Include="Views\Shared\_NavPartial.cshtml" />
+    <Content Include="Views\Shared\_AdminLinkPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Student\Models\" />
+    <Folder Include="Areas\Student\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
